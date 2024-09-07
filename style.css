@@ -162,7 +162,7 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
 
-    max-width: 600px;
+    max-width: 650px;
     min-height: min-content;
     background-color: var(--White);
     padding: 1.5rem;
