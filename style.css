@@ -1,0 +1,228 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+
+    --Font-size: 16px;
+    --Font-weight-400: 400;
+    --Font-weight-600: 600;
+    --Font-weight-700: 700;
+
+    --font-family-100: "Outfit", sans-serif;
+    --font-family-200: "Young Serif", serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+picture img {
+    border-radius: 0.6rem;
+}
+
+h1,
+h2 {
+    font-weight: var(--Font-weight-700);
+    font-family: var(--font-family-200);
+}
+
+h2 {
+    color: var(--Brown-800);
+}
+
+h3 {
+    color: var(--Rose-800);
+    font-family: var(--font-family-100);
+    font-weight: var(--Font-weight-600);
+}
+
+nav,
+p {
+    font-weight: var(--Font-weight-400);
+    font-family: var(--font-family-100);
+    font-size: var(--Font-size);
+}
+
+span {
+    font-weight: var(--Font-weight-600);
+}
+
+ol,
+ul {
+    padding: 0 0 0 1.1rem;
+}
+
+ol li::marker,
+ul li::marker {
+    color: var(--Brown-800);
+    font-weight: var(--Font-weight-700);
+}
+
+.preparation-time ul li::marker {
+    color: var(--Rose-800);
+    font-weight: var(--Font-weight-700);
+}
+
+p,
+li,
+td {
+    opacity: 0.6;
+}
+
+
+body {
+    background-color: var(--Stone-100);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    max-width: 500px;
+    min-height: min-content;
+    background-color: var(--White);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 3rem 0;
+}
+
+.preparation-time {
+    background-color: var(--Rose-50);
+    padding: 0.6em;
+    border-radius: 0.5em;
+}
+
+.ingridients,
+.instructions {
+    border-bottom: 2px solid hsl(30, 18%, 87%);
+}
+
+.nutrition {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.7rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-family-100);
+}
+
+table tr {
+    border-bottom: 2px solid hsl(30, 18%, 87%);
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table tr td {
+    padding: 1rem;
+}
+
+table tr td:nth-child(even) {
+    color: var(--Brown-800);
+    font-weight: var(--Font-weight-700);
+}
+
+
+@media (max-width: 40em) {
+    .container {
+        border-radius: 0%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container div {
+        margin: 0 1.5rem;
+    }
+
+    .container picture img {
+        border-radius: 0;
+    }
+}
